@@ -88,12 +88,26 @@ font you please*/
                                     CLR_GDK(0xA3BABF),
                                     CLR_GDK(0xffffff)
                             }, 16);
-    //Features
-    vte_terminal_set_scrollback_lines(VTE_TERMINAL(terminal), 0);
-    vte_terminal_set_scroll_on_output(VTE_TERMINAL(terminal), FALSE);
-    vte_terminal_set_scroll_on_keystroke(VTE_TERMINAL(terminal), TRUE);
-    vte_terminal_set_mouse_autohide(VTE_TERMINAL(terminal), TRUE);
-    vte_terminal_set_audible_bell(terminal, TRUE);
+/*Set the cursor color*/
+	vte_terminal_set_color_cursor(VTE_TERMINAL(terminal), &CLR_GDK(0xaece91));
+	vte_terminal_set_color_cursor_foreground(VTE_TERMINAL(terminal), &CLR_GDK(0x0000ff));
+	
+	/*Set Terminal Size*/
+	vte_terminal_set_size (VTE_TERMINAL(terminal), 80, 24);
+	
+	/*Set Font Scale*/
+	vte_terminal_set_font_scale (VTE_TERMINAL(terminal), 0.95);
+                        
+
+	/*Features*/
+		vte_terminal_set_scrollback_lines(VTE_TERMINAL(terminal), 0);
+		vte_terminal_set_scroll_on_output(VTE_TERMINAL(terminal), FALSE);
+		vte_terminal_set_scroll_on_keystroke(VTE_TERMINAL(terminal), TRUE);
+		vte_terminal_set_mouse_autohide(VTE_TERMINAL(terminal), TRUE);
+		vte_terminal_set_audible_bell(terminal, TRUE);
+		vte_terminal_set_rewrap_on_resize (VTE_TERMINAL(terminal), TRUE);
+		vte_terminal_set_cursor_blink_mode (VTE_TERMINAL(terminal), TRUE);
+		vte_terminal_set_scroll_on_keystroke (VTE_TERMINAL(terminal), TRUE);
 
     /*Put widgets together and run main loop*/
     gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(terminal));
