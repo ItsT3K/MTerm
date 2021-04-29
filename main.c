@@ -7,7 +7,6 @@ Vincent Bernat terminal code.*/
 
 #include <vte/vte.h>
 #include <gtk/gtk.h>
-
 #define CLR_R(x) (((x)&0xff0000) >> 16)
 #define CLR_G(x) (((x)&0x00ff00) >> 8)
 #define CLR_B(x) (((x)&0x0000ff) >> 0)
@@ -65,7 +64,8 @@ font you please*/
     gtk_container_add(GTK_CONTAINER(window), terminal);
     gtk_widget_show_all(window);
 
-
+    /*Set Window Icon*/
+    gtk_window_set_icon_from_file(GTK_WINDOW(window), "../icon.png", NULL);
 /*Set the terminal colors*/
     vte_terminal_set_colors(VTE_TERMINAL(terminal),
                             &CLR_GDK(0xffffff),
@@ -108,7 +108,7 @@ font you please*/
 		vte_terminal_set_rewrap_on_resize (VTE_TERMINAL(terminal), TRUE);
 		vte_terminal_set_cursor_blink_mode (VTE_TERMINAL(terminal), TRUE);
 		vte_terminal_set_scroll_on_keystroke (VTE_TERMINAL(terminal), TRUE);
-
+		
     /*Put widgets together and run main loop*/
     gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(terminal));
     gtk_widget_show_all(GTK_WIDGET(window));
