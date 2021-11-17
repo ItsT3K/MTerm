@@ -50,7 +50,7 @@ main(int argc, char *argv[]) {
 /*GTK Font. The DEC TERMINAL Font is required by default. But you can change this to whatever
 font you please*/
     PangoContext *context = pango_context_new();
-    PangoFontDescription *desc = pango_font_description_from_string("DEC Terminal Modern Regular 14");
+    PangoFontDescription *desc = pango_font_description_from_string("pixifont2 14");
     PangoFontMap *pfm = pango_cairo_font_map_get_default();
     PangoFont *font = pango_font_map_load_font(pfm, context, desc);
     vte_terminal_set_font(terminal, desc);
