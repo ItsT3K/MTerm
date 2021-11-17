@@ -1,7 +1,5 @@
 # MTerm
-MTerm is a terminal I decided to work on based around a VTE terminal tutorial. This terminal requires the DEC Terminal Modern font to be pre-installed to your computer. This font can be gotten here https://www.dafont.com/dec-terminal-modern.font and installed to any computer that utilizes .ttf files.
-
-I originally started this terminal out of boredom but I don't feel like quitting working on it :p
+MTerm is a terminal I decided to work on based around a VTE terminal tutorial. The original idea of this terminal was to have it look like a DEC terminal by using the DEC Terminal Font. However this got annoying for me to use after a bit. So I decided to change it. Originally the change was to Perfect DOS VGA which looked alright. Then I settled on Pixifont 2 by https://kokoscript.com. 
 
 # How do I install mterm?
 
