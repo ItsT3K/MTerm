@@ -13,4 +13,4 @@ target_compile_definitions(mterm PUBLIC ICONPATH="${CMAKE_INSTALL_PREFIX}/share/
 install(TARGETS mterm DESTINATION bin)
 install(FILES icon.png DESTINATION share)
 install(FILES mterm.1.gz DESTINATION share/man/man1)
-install(FILES DECTerminalModern-Regular.otf DESTINATION share/fonts)
+install(FILES pixifont2.ttf DESTINATION share/fonts)
