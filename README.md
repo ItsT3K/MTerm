@@ -14,6 +14,14 @@ On Fedora
 1. Go into your terminal and if it's not already installed install `vte291-devel` and `cmake`
 2. Install the font. Same process as Ubuntu/Debian from here to step 5
 
+On OpenIndiana
+1. Go to your terminal and do `sudo pkg install metapackages/build-essential`
+2. If not installed install VTE by doing `sudo pkg install library/desktop/vte`
+3. create the build directory and go to it `mkdir build && cd build`
+4. cmake it then make it (in this example im using 4 threads) `cmake .. && gmake -j4`
+5. Install it `sudo gmake install`
+6. done!
+
 # Thanks to
 Thanks to @foxgirl_IRL on twitter (https://kokoscript.com) for letting me use and package Pixifont 2 Monospace with the terminal and allowing me to rename the internal font name so it would work properly after mterm is compiled. 
 
