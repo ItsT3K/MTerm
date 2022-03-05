@@ -22,6 +22,13 @@ On OpenIndiana
 5. Install it `sudo gmake install`
 6. done!
 
+On FreeBSD
+1. Go to your terminal and do `sudo pkg install vte3 cmake gcc git devel/pkgconf`
+2. Create the build directory and go to it `mkdir build && cd build`
+3. cmake it and then make it `cmake .. && make -j4`
+4. install `sudo make install`
+5. done!!
+
 # Thanks to
 Thanks to @foxgirl_IRL on twitter (https://kokoscript.com) for letting me use and package Pixifont 2 Monospace with the terminal and allowing me to rename the internal font name so it would work properly after mterm is compiled. 
 
